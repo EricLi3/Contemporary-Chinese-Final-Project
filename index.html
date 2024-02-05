@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="chat-container"></div>
+    <div id="user-input">
+        <input type="text" id="message-input" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+        const socket = new WebSocket("ws://localhost:3000");
+
+        // Function to send a message
+        function sendMessage() {
+            const messageInput = document.getElementById("message-input");
+            const message = messageInput.value;
+
+            if (message.trim() !== "") {
+                const userMessageObject = { type: 'message', content: message, sender: 'user' };
+
+                // Send the user message
+                socket.send(JSON.stringify(userMessageObject));
+
+                // Display the user message in the chat container
+                displayMessage(userMessageObject);
+
+                // Simulate a response from another user after a short delay
+                setTimeout(() => {
+                    const responseMessageObject = { type: 'message', content: 'Response to: ' + message, sender: 'received' };
+                    displayMessage(responseMessageObject);
+                }, 1000);
+
+                // Clear the input field
+                messageInput.value = "";
+            }
+        }
+
+        // Function to display a message in the chat container
+        function displayMessage(messageObject) {
+            const chatContainer = document.getElementById("chat-container");
+            const messageClass = messageObject.sender === 'user' ? 'user-message' : 'received-message';
+            chatContainer.innerHTML += `<div class="message ${messageClass}"><p>${messageObject.content}</p></div>`;
+        }
+
+        // Handle incoming messages
+        socket.addEventListener("message", function(event) {
+            try {
+                const parsedMessage = JSON.parse(event.data);
+                displayMessage(parsedMessage);
+            } catch (error) {
+                console.error('Error parsing incoming message:', error);
+            }
+        });
+    </script>
+
+</body>
+</html>

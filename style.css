@@ -1,0 +1,15 @@
+/* styles.css */
+.user-message {
+    text-align: right;
+    background-color: #cce5ff;
+}
+
+.received-message {
+    text-align: left;
+    background-color: #e5ffe5;
+}
+
+.sent-message {
+    text-align: right;
+    background-color: #ffebcc;
+}

@@ -20,3 +20,8 @@
     margin-bottom: 20px; /* Add space at the bottom */
 }
 
+#welcomeMessage, .message {
+    font-family: 'Roboto', sans-serif; 
+    font-size: 16px; 
+}
+

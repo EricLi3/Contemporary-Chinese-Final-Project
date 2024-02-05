@@ -30,6 +30,7 @@
             </ul>
         </div>
     </nav>
+    <div id="welcomeMessage" class="text-center mt-3"></div>
 
     <div class="image-container text-center">
         <img src="images\thumbmail_image.jpg" alt="Centered Image" class="center-block custom-image-size">
@@ -37,15 +38,27 @@
 
     <div class="container mt-5">
         <div id="chat-container"></div>
-    
+
         <div id="user-input" class="mt-3">
             <!-- Use a smaller textarea -->
-            <textarea id="message-input" class="form-control form-control-sm" placeholder="Type your message..." rows="1" oninput="adjustTextareaHeight()"></textarea>
+            <textarea id="message-input" class="form-control form-control-sm" placeholder="Type your message..."
+                rows="1" oninput="adjustTextareaHeight()"></textarea>
             <button class="btn btn-primary mt-3" onclick="sendMessage()">Send</button>
         </div>
     </div>
-    
-    
+
+    <script>
+        // Extract the name from the query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+
+        // Update the welcome message with the user's name
+        const welcomeMessage = document.getElementById("welcomeMessage");
+        if (name) {
+            welcomeMessage.textContent = `Welcome to ${name}'s Chat Room!`;
+        }
+    </script>
+
     <script>
         // Function to adjust the height of the textarea based on its content
         function adjustTextareaHeight() {
@@ -53,10 +66,8 @@
             textarea.style.height = "auto";
             textarea.style.height = (textarea.scrollHeight) + "px";
         }
-    
-        // Rest of your existing JavaScript code...
     </script>
-    
+
 
     <script>
         const socket = new WebSocket("ws://localhost:3000");

@@ -6,7 +6,7 @@ CS Class:
 Programming Languages: HTML, CSS, and JavaScript
 OS/Hardware dependencies:	
 		
-Problem Description: sing websocket library along with Express and HTTP modules, we set upa  websocket server that handels incoming messages, connections and disonnections Brodacsting the message to all of the connected clients		
+Problem Description: using websocket library along with Express and HTTP modules, we set upa  websocket server that handels incoming messages, connections and disonnections Brodacsting the message to all of the connected clients		
 
 Overall Design:			
 	System structure	

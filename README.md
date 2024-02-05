@@ -11,9 +11,9 @@ Objectives:
 Scope:
 The project will contain a rudimentary online forum accessible to Asian Americans, ensuring a user-friendly interface, anonymity features, and cultural sensitivity. The platform will provide peer-to-peer forums, mental health resources, and an option to connect to mental health professionals. We plan to record a video demonstrating the product’s functionality and features. Later, we plan to communicate with MHACC and potentially add our website’s functionality to their platform.     <br>  <br>
 Management:
-1. 	Finalize our strategy of approach for this project (2/6)
-2. Locate proper resources to facilitate us in this project (2/7)
-3. Finalize our intended audience for this project, and how to send out project proposal (2/10)
-4. Use resources to make a rough draft of the project (2/16)
-5. Finalize draft of project (2/23)
-6. Present & distribute to appropriate people. (When complete)
+-	Finalize our strategy of approach for this project (2/6)
+- Locate proper resources to facilitate us in this project (2/7)
+- Finalize our intended audience for this project, and how to send out project proposal (2/10)
+- Use resources to make a rough draft of the project (2/16)
+- Finalize draft of project (2/23)
+- Present & distribute to appropriate people. (When complete)

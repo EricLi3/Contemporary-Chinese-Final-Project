@@ -1,4 +1,4 @@
-# Contemporary-Chinese-Final-Project
+# Contemporary-Chinese-Final-Project   Eric, Alex, and Daniel
 
 Background:
 The "Warm Room" project seeks to establish a proof-of-concept anonymous forum that fosters open discussions and supports mental health challenges within the Asian American community. By creating a safe and culturally sensitive space, this platform seeks to handle the unique mental health needs of Asian Americans and play a role in breaking down the stigma surrounding mental health, particularly in the Asian community.

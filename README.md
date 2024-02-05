@@ -8,7 +8,7 @@ Objectives:
 -	Implement strict moderation policies to ensure a safe and respectful space, free from harassment or harmful behavior.
 -	Address Stigmas Surrounding Mental Health: Work towards breaking down cultural stigmas associated with mental health and promote understanding and acceptance.  <br>
 Scope:
-The project will contain a rudimentary online forum accessible to Asian Americans, ensuring a user-friendly interface, anonymity features, and cultural sensitivity. The platform will provide peer-to-peer forums, mental health resources, and an option to connect to mental health professionals. We plan to record a video demonstrating the product’s functionality and features. Later, we plan to communicate with MHACC and potentially add our website’s functionality to their platform.     <br>
+The project will contain a rudimentary online forum accessible to Asian Americans, ensuring a user-friendly interface, anonymity features, and cultural sensitivity. The platform will provide peer-to-peer forums, mental health resources, and an option to connect to mental health professionals. We plan to record a video demonstrating the product’s functionality and features. Later, we plan to communicate with MHACC and potentially add our website’s functionality to their platform.     <br>  <br>
 Management:
 1. 	Finalize our strategy of approach for this project (2/6)
 2. Locate proper resources to facilitate us in this project (2/7)

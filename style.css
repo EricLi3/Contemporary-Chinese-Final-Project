@@ -1,7 +1,7 @@
 /* styles.css */
 .user-message {
-    text-align: right;
-    background-color: #cce5ff;
+    text-align: left;
+    background-color: #8ab1db;
 }
 
 .received-message {
@@ -9,7 +9,3 @@
     background-color: #e5ffe5;
 }
 
-.sent-message {
-    text-align: right;
-    background-color: #ffebcc;
-}

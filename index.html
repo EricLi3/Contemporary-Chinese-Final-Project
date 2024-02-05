@@ -1,17 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat App</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>暖屋</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <div id="chat-container"></div>
-    <div id="user-input">
-        <input type="text" id="message-input" placeholder="Type your message...">
-        <button onclick="sendMessage()">Send</button>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">暖屋</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Chat Room</a></li>
+                <li><a href="https://www.mhacc-usa.org/">MHACC</a></li>
+                <li><a href="https://www.mhacc-usa.org/finding-a-professional-provider">Get Help</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="register.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div id="chat-container"></div>
+        <div id="user-input" class="mt-3">
+            <input type="text" id="message-input" class="form-control" placeholder="Type your message..."
+                onkeyup="handleKeyUp(event)">
+            <button class="btn btn-primary mt-2" onclick="sendMessage()">Send</button>
+        </div>
     </div>
 
     <script>
@@ -29,12 +54,12 @@
                 socket.send(JSON.stringify(userMessageObject));
 
                 // Display the user message in the chat container
-                displayMessage(userMessageObject);
+                displayMessage(userMessageObject, 'user-message');
 
                 // Simulate a response from another user after a short delay
                 setTimeout(() => {
                     const responseMessageObject = { type: 'message', content: 'Response to: ' + message, sender: 'received' };
-                    displayMessage(responseMessageObject);
+                    displayMessage(responseMessageObject, 'received-message');
                 }, 1000);
 
                 // Clear the input field
@@ -43,22 +68,30 @@
         }
 
         // Function to display a message in the chat container
-        function displayMessage(messageObject) {
+        function displayMessage(messageObject, messageClass) {
             const chatContainer = document.getElementById("chat-container");
-            const messageClass = messageObject.sender === 'user' ? 'user-message' : 'received-message';
             chatContainer.innerHTML += `<div class="message ${messageClass}"><p>${messageObject.content}</p></div>`;
         }
 
         // Handle incoming messages
-        socket.addEventListener("message", function(event) {
+        socket.addEventListener("message", function (event) {
             try {
                 const parsedMessage = JSON.parse(event.data);
-                displayMessage(parsedMessage);
+                // Display the incoming message with a different background color
+                displayMessage(parsedMessage, 'received-message');
             } catch (error) {
                 console.error('Error parsing incoming message:', error);
             }
         });
+
+        // Function to handle 'Enter' key press
+        function handleKeyUp(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
     </script>
 
 </body>
+
 </html>

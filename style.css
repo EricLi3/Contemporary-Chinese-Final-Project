@@ -11,19 +11,32 @@
 }
 
 .image-container {
-    margin-top: 50px; /* Adjust the margin based on your design */
+    text-align: center; /* Center align the content within the container */
 }
 
-/* Style the image with custom size */
 .custom-image-size {
     width: 420px; /* Set the desired width */
     height: auto; /* Maintain aspect ratio */
     margin-bottom: 20px; /* Add space at the bottom */
 }
+.image-container img {
+    max-width: 100%; /* Set the maximum width of the images to 100% of their container */
+    height: auto; /* Maintain the aspect ratio */
+    margin: 10px; /* Add margin to create space between images and text */
+    padding : 10px;
+}
+
+
+.center-block.custom-image-size {
+    width: 420px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Add space at the bottom */
+    
+}
 
 #welcomeMessage, .message {
     font-family: 'Roboto', sans-serif; 
-    font-size: 16px; 
+    font-size: 20px; 
 }
 
 p{

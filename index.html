@@ -145,8 +145,10 @@
         // Function to display a message in the chat container
         function displayMessage(messageObject, messageClass) {
             const chatContainer = document.getElementById("chat-container");
-            chatContainer.innerHTML += `<div class="message ${messageClass}"><p>${messageObject.content}</p></div>`;
+            const messageClassName = messageObject.sender === 'received' ? 'received-message' : 'user-message';
+            chatContainer.innerHTML += `<div class="message ${messageClassName}"><p>${messageObject.content}</p></div>`;
         }
+        
 
         // Handle incoming messages
         socket.addEventListener("message", function (event) {

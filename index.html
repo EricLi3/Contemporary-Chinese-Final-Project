@@ -17,6 +17,7 @@
         body {
             background-color: #474e5d;
         }
+
         div#google_translate_element {
             text-align: center;
         }
@@ -152,7 +153,7 @@
             const messageClassName = messageObject.sender === 'received' ? 'received-message' : 'user-message';
             chatContainer.innerHTML += `<div class="message ${messageClassName}"><p>${messageObject.content}</p></div>`;
         }
-        
+
 
         // Handle incoming messages
         socket.addEventListener("message", function (event) {

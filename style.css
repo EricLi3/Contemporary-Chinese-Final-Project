@@ -4,7 +4,18 @@
     background-color: #8ab1db;
 }
 
-
+.page-container{
+    min-width: 100em;
+    max-width: 99.75rem;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 0;
+    margin: 0 auto;
+    padding-top: 0.05px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    background-color: #2f2f2f;
+}
 .received-message {
     text-align: left;
     background-color: #e5ffe5;

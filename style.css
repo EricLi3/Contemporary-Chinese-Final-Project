@@ -5,8 +5,8 @@
 }
 
 .page-container{
-    min-width: 100em;
-    max-width: 99.75rem;
+    min-width: 99em;
+    max-width: 101rem;
     box-sizing: border-box;
     position: relative;
     z-index: 0;

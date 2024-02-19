@@ -18,4 +18,4 @@ Management:
 - Finalize draft of project (2/23)
 - Present & distribute to appropriate people. (When complete)
 
-We utilized websockets, HTML, CSS, JavaScript, and Bootstrap to provide our site. And used Node to create a server for multi-user communication. 
+We utilized express and Websocket for multi-user communication, HTML, CSS, JavaScript, and Bootstrap to provide our site.

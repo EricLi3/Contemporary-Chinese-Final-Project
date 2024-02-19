@@ -180,6 +180,34 @@
             new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
         }
     </script>
+    <script>
+        // Load the YouTube IFrame Player API asynchronously
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        
+        // Function to create the YouTube player
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '360',
+                width: '640',
+                videoId: 'VIDEO_ID', // Replace VIDEO_ID with your actual YouTube video ID
+                events: {
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+        
+        // Function to handle player state changes
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.ENDED) {
+                // Close the frame when the video is complete
+                window.close();
+            }
+        }
+        </script>
 </body>
 
 </html>

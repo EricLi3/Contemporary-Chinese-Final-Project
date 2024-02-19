@@ -17,3 +17,5 @@ Management:
 - Use resources to make a rough draft of the project (2/16)
 - Finalize draft of project (2/23)
 - Present & distribute to appropriate people. (When complete)
+
+We utilized websockets, HTML, CSS, JavaScript, and Bootstrap to provide our site. And used Node to create a server for multi-user communication. 
